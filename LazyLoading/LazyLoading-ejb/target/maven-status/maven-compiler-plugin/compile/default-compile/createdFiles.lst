@@ -1,0 +1,6 @@
+com\techandsolve\lazyloading\model\Case.class
+com\techandsolve\lazyloading\model\TripsToProcess.class
+com\techandsolve\lazyloading\utils\DataExtractor.class
+com\techandsolve\lazyloading\ejb\LazyLoadingBean.class
+com\techandsolve\lazyloading\model\Execution.class
+com\techandsolve\lazyloading\model\Day.class
