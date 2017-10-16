@@ -16,7 +16,7 @@ const selectDataProcessingDomain = (state) => state.get('dataProcessing');
 
 const makeSelectDataProcessing = () => createSelector(
   selectDataProcessingDomain,
-  (substate) => substate
+  (substate) => substate.toJS()
 );
 
 export default makeSelectDataProcessing;

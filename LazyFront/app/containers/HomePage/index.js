@@ -12,7 +12,9 @@
 import React from 'react';
 import { FormattedMessage } from 'react-intl';
 import messages from './messages';
-
+import { connect } from 'react-redux';
+import { createStructuredSelector } from 'reselect';
+import makeSelectDataProcessing from './selectors';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import Results from '../../components/Results';
@@ -46,6 +48,7 @@ class HomePage extends React.PureComponent { // eslint-disable-line react/prefer
   }
   
   render() {
+    
     return (
       <div>
         <Header />
@@ -87,4 +90,4 @@ const mapStateToProps = createStructuredSelector({
   data: makeSelectDataProcessing(),
 });
 
-export default connect(mapStateToProps, actions)(HomePage);
+export default connect(mapStateToProps, {})(HomePage);

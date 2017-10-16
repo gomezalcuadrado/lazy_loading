@@ -12,7 +12,7 @@ import {
 import {
   REQUEST_START,
   REQUEST_SUCCESS
-} from '../constants';
+} from '../../constants';
 
 const initialState = fromJS({"cases" : null, showLoader: false});
 

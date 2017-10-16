@@ -6,7 +6,6 @@ import { call, put, select, takeLatest } from 'redux-saga/effects';
 import { GET_EXECUTIONS } from './constants';
 import { saveExecutions } from './actions';
 import { invoke } from 'utils/sagaHelper';
-import request from 'utils/request';
 import api from 'api/lazyAPI';
 
 /**
@@ -15,7 +14,10 @@ import api from 'api/lazyAPI';
 export function* getExecutions() {
   // Select username from store
   const executions = yield call(invoke, api.getExecutions)
-  yield put(saveExecutions(executions));
+  if(executions !== 'error'){
+    yield put(saveExecutions(executions));
+  }
+  
 }
 
 /**

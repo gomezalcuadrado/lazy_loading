@@ -32,7 +32,7 @@ function Results(p) {
 }
 
 Results.propTypes = {
-
+  cases: React.PropTypes.array.isRequired
 };
 
 export default Results;

@@ -3,10 +3,9 @@
  */
 
 import { call, put, select, takeLatest } from 'redux-saga/effects';
-import { GET_EXECUTIONS } from './constants';
+import { GET_EXECUTIONS, PROCESS_FILE } from './constants';
 import { saveCases } from './actions';
 import { invoke } from 'utils/sagaHelper';
-import request from 'utils/request';
 import api from 'api/lazyAPI';
 
 /**
